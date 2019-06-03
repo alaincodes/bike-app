@@ -1,2 +1,190 @@
-@charset "utf-8"
-@import "../../node_modules/bulma/bulma.sass"
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+
+html, body
+    height: 100%
+
+nav 
+    display: flex
+    justify-content: space-around
+    align-items: center
+    min-height: 8vh
+    background: palevioletred
+
+.logo 
+    color: papayawhip
+    text-transform: uppercase
+    letter-spacing: 5px
+    font-size: 20px
+    line-height: 4
+
+
+.nav-links 
+    display: flex
+    width: 30%
+    justify-content: space-around
+
+
+.nav-links li 
+    list-style: none
+
+
+.nav-links a 
+    color: papayawhip
+    text-decoration: none
+    letter-spacing: 3px
+    font-weight: bold
+    font-size: 14px
+
+.burger 
+    display: none
+    cursor: pointer
+
+.burger div 
+    width: 25px
+    height: 3px
+    background-color: papayawhip
+    margin: 5px
+    transition: all 0.3 ease
+
+@media screen and (max-width: 1024px)
+    .nav-links
+    width: 60%
+
+@media screen and (max-width: 768px) 
+    body 
+        overflow-x: hidden
+    
+    .nav-links 
+        position: absolute
+        right: 0
+        height: 92vh
+        top: 8vh
+        background-color: palevioletred
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 50%
+        transition: transform 0.5s ease-in;
+
+    
+    .nav-links li 
+        opacity: 0
+    
+    .burger 
+        display: block
+
+
+
+.nav-active 
+    transform: translateX(0%)
+
+
+@-webkit-keyframes navLinkFade 
+    from 
+        opacity: 0
+        transform: translateX(50px)
+    to 
+        opacity: 1
+        transform: translateX(0px)
+
+
+
+@keyframes navLinkFade 
+    from 
+        opacity: 0
+        transform: translateX(50px)
+    
+    to 
+        opacity: 1
+        transform: translateX(0px)
+
+
+.toggle .line1 
+    transform: rotate(-45deg) translate(-5px, 6px)
+
+
+.toggle .line2 
+    opacity: 0
+
+
+.toggle .line3 
+    transform: rotate(45deg) translate(-5px, -6px)
+
+
+
+#map
+    height: calc(100% - 16vh)
+
+.onetap
+    background-color: green
+    height: 240px
+
+p 
+    color: blue
+
+.footer
+    position: fixed
+    left: 0
+    bottom: 0
+    width: 100%
+    background-color: palevioletred
+    text-align: center
+    height: 8vh
+    display: flex
+    align-items: center
+    justify-content: center
+
+.footer-timing
+    border: 1px solid papayawhip
+    width: 500px
+    border-radius: 5px
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: red
+    color: white
+
+/* The Modal (background) */
+.modal 
+    display: none /* Hidden by default */
+    position: fixed /* Stay in place */
+    z-index: 1 /* Sit on top */
+    padding-top: 100px /* Location of the box */
+    left: 0
+    top: 0
+    width: 100% /* Full width */
+    height: 100% /* Full height */
+    overflow: auto /* Enable scroll if needed */
+    background-color: rgb(0,0,0) /* Fallback color */
+    background-color: rgba(0,0,0,0.4) /* Black w/ opacity */
+
+
+/* Modal Content */
+.modal-content 
+    background-color: #fefefe
+    margin: auto
+    padding: 20px
+    border: 1px solid #888
+    width: 80%
+
+
+/* The Close Button */
+.close 
+    color: #aaaaaa
+    float: right
+    font-size: 28px
+    font-weight: bold
+
+
+.close:hover,
+.close:focus 
+    color: #000
+    text-decoration: none
+    cursor: pointer
+
+
+

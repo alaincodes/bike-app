@@ -11,11 +11,12 @@
   <body>
     <nav>
       <div class="logo">
-        <h4>webike <i class="fas fa-bicycle fa-2x"></i></h4>
+        <h4>webike <i class="fas fa-bicycle fa-lg"></i></h4>
       </div>
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Informations</a></li>
+        <li><a href="#">Bike</a></li>
+        <li><a href="#">Parking</a></li>
+        <li id="how-btn"><a href="#">How it works</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
       <div class="burger">
@@ -27,275 +28,47 @@
 
     <div id="map"></div>
 
+    <!-- Modal 1 BIKE INFOS -->
     <div id="myModal" class="modal">
-      <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <section class="onetap">
-          <p id="nomStation"></p>
-          <p id="adresseStation"></p>
-          <p id="statuStation"></p>
-          <p id="retourVelo"></p>
-          <p id="nbrMaxVelos"></p>
-          <p id="velosRestants"></p>
-          <button id="myBtn">Book a Bike</button>
-        </section>
+        <p id="nomStation">Name</p>
+        <p id="adresseStation">Address</p>
+        <p id="statuStation">Status</p>
+        <p id="retourVelo">Space Available</p>
+        <p id="nbrMaxVelos">Max Bike</p>
+        <p id="velosRestants">Bike left</p>
+        <button id="myBtn">Book a Bike</button>
+      </div>
+    </div>
+
+    <!-- Modal 2 HOW IT WORKS -->
+    <button id="how-btn">Open Modal</button>
+    <div id="how-modal" class="how-modal">
+      <div class="how-modal-content">
+        <span class="how-close">&times;</span>
+        <p>Click Bike Location</p>
+        <p>Confirm to Rent</p>
       </div>
     </div>
 
     <footer class="footer">
       <div class="footer-timing">You have 15 minutes until auto cancel.</div>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      </div>
     </footer>
 
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: 43.29695, lng: 5.38107 },
-          zoom: 16,
-          disableDefaultUI: true,
-          styles: [
-            {
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#ebe3cd"
-                }
-              ]
-            },
-            {
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#523735"
-                }
-              ]
-            },
-            {
-              elementType: "labels.text.stroke",
-              stylers: [
-                {
-                  color: "#f5f1e6"
-                }
-              ]
-            },
-            {
-              featureType: "administrative",
-              elementType: "geometry.stroke",
-              stylers: [
-                {
-                  color: "#c9b2a6"
-                }
-              ]
-            },
-            {
-              featureType: "administrative.land_parcel",
-              elementType: "geometry.stroke",
-              stylers: [
-                {
-                  color: "#dcd2be"
-                }
-              ]
-            },
-            {
-              featureType: "administrative.land_parcel",
-              elementType: "labels",
-              stylers: [
-                {
-                  visibility: "off"
-                }
-              ]
-            },
-            {
-              featureType: "administrative.land_parcel",
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#ae9e90"
-                }
-              ]
-            },
-            {
-              featureType: "landscape.natural",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#dfd2ae"
-                }
-              ]
-            },
-            {
-              featureType: "poi",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#dfd2ae"
-                }
-              ]
-            },
-            {
-              featureType: "poi",
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#93817c"
-                }
-              ]
-            },
-            {
-              featureType: "poi.park",
-              elementType: "geometry.fill",
-              stylers: [
-                {
-                  color: "#a5b076"
-                }
-              ]
-            },
-            {
-              featureType: "poi.park",
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#447530"
-                }
-              ]
-            },
-            {
-              featureType: "road",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#f5f1e6"
-                }
-              ]
-            },
-            {
-              featureType: "road.arterial",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#fdfcf8"
-                }
-              ]
-            },
-            {
-              featureType: "road.highway",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#f8c967"
-                }
-              ]
-            },
-            {
-              featureType: "road.highway",
-              elementType: "geometry.stroke",
-              stylers: [
-                {
-                  color: "#e9bc62"
-                }
-              ]
-            },
-            {
-              featureType: "road.highway.controlled_access",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#e98d58"
-                }
-              ]
-            },
-            {
-              featureType: "road.highway.controlled_access",
-              elementType: "geometry.stroke",
-              stylers: [
-                {
-                  color: "#db8555"
-                }
-              ]
-            },
-            {
-              featureType: "road.local",
-              elementType: "labels",
-              stylers: [
-                {
-                  visibility: "off"
-                }
-              ]
-            },
-            {
-              featureType: "road.local",
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#806b63"
-                }
-              ]
-            },
-            {
-              featureType: "transit.line",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#dfd2ae"
-                }
-              ]
-            },
-            {
-              featureType: "transit.line",
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#8f7d77"
-                }
-              ]
-            },
-            {
-              featureType: "transit.line",
-              elementType: "labels.text.stroke",
-              stylers: [
-                {
-                  color: "#ebe3cd"
-                }
-              ]
-            },
-            {
-              featureType: "transit.station",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#dfd2ae"
-                }
-              ]
-            },
-            {
-              featureType: "water",
-              elementType: "geometry.fill",
-              stylers: [
-                {
-                  color: "#b9d3c2"
-                }
-              ]
-            },
-            {
-              featureType: "water",
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#92998d"
-                }
-              ]
-            }
-          ]
-        });
-      }
-    </script>
-
+    <script src="./js/map.js"></script>
     <script
       async
       defer
-      src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7iEz0Dx5xtH3krUfm-D6zfqKCDXRtHig&callback=initMap"
     ></script>
     <script src="./js/app.js"></script>
+    <script src="./js/howitworks.js"></script>
   </body>
 </html>

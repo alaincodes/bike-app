@@ -7,6 +7,8 @@
 
 html, body {
   height: 100%;
+  font-size: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 nav {
@@ -37,10 +39,12 @@ nav {
   width: 30%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  white-space: nowrap;
 }
 
 .nav-links li {
   list-style: none;
+  padding-left: 2rem;
 }
 
 .nav-links a {
@@ -152,15 +156,6 @@ nav {
   height: calc(100% - 16vh);
 }
 
-.onetap {
-  background-color: green;
-  height: 240px;
-}
-
-p {
-  color: blue;
-}
-
 .footer {
   position: fixed;
   left: 0;
@@ -180,7 +175,7 @@ p {
           justify-content: center;
 }
 
-.footer-timing {
+.footer .footer-timing {
   border: 1px solid papayawhip;
   width: 500px;
   border-radius: 5px;
@@ -196,10 +191,110 @@ p {
           justify-content: center;
   background-color: red;
   color: white;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  margin: auto 1rem;
 }
 
-/* The Modal (background) */
+.footer .footer-socials {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: auto 1rem;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .footer-socials a {
+  color: white;
+}
+
+.footer .footer-socials a:hover {
+  color: papayawhip;
+}
+
+/* The Modal BIKE INFOS */
 .modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(216, 112, 147, 0.288);
+}
+
+.modal-content {
+  background-color: papayawhip;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid palevioletred;
+  width: 80%;
+  border-radius: 5px;
+  display: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-content button {
+  background: palevioletred;
+  border: 1px solid palevioletred;
+  padding: 0.5rem;
+  border-radius: 3px;
+  margin: 1rem auto;
+  color: papayawhip;
+  cursor: pointer;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+
+.modal-content button:hover {
+  background: papayawhip;
+  color: palevioletred;
+  border: 1px solid palevioletred;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 1px solid palevioletred;
+  border-radius: 20%;
+  padding: 0.3rem;
+  color: palevioletred;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+
+.close:hover,
+.close:focus {
+  color: papayawhip;
+  text-decoration: none;
+  cursor: pointer;
+  background: palevioletred;
+}
+
+.how-modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -209,31 +304,46 @@ p {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(216, 112, 147, 0.288);
 }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
+.how-modal-content {
+  background-color: papayawhip;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
+  border: 2px solid palevioletred;
   width: 80%;
+  border-radius: 5px;
+  display: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
+.how-close {
   float: right;
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: bold;
+  border: 1px solid palevioletred;
+  border-radius: 20%;
+  padding: 0.3rem;
+  color: palevioletred;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
+.how-close:hover,
+.how-close:focus {
+  color: papayawhip;
   text-decoration: none;
   cursor: pointer;
+  background: palevioletred;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,4 @@
+
 *
     box-sizing: border-box
     padding: 0
@@ -5,6 +6,8 @@
 
 html, body
     height: 100%
+    font-size: 16px
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 
 nav 
     display: flex
@@ -25,10 +28,12 @@ nav
     display: flex
     width: 30%
     justify-content: space-around
+    white-space: nowrap
 
 
 .nav-links li 
     list-style: none
+    padding-left: 2rem
 
 
 .nav-links a 
@@ -118,13 +123,6 @@ nav
 #map
     height: calc(100% - 16vh)
 
-.onetap
-    background-color: green
-    height: 240px
-
-p 
-    color: blue
-
 .footer
     position: fixed
     left: 0
@@ -136,55 +134,136 @@ p
     display: flex
     align-items: center
     justify-content: center
+    .footer-timing
+        border: 1px solid papayawhip
+        width: 500px
+        border-radius: 5px
+        height: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: red
+        color: white
+        flex: 2
+        margin: auto 1rem
+    .footer-socials
+        flex: 1
+        margin: auto 1rem
+        height: 40px
+        display: flex
+        justify-content: space-around
+        align-items: center
+        a
+            color: white
+            &:hover
+                color: papayawhip
 
-.footer-timing
-    border: 1px solid papayawhip
-    width: 500px
-    border-radius: 5px
-    height: 40px
-    display: flex
-    align-items: center
-    justify-content: center
-    background-color: red
-    color: white
 
-/* The Modal (background) */
+
+
+/* The Modal BIKE INFOS */
 .modal 
-    display: none /* Hidden by default */
-    position: fixed /* Stay in place */
-    z-index: 1 /* Sit on top */
-    padding-top: 100px /* Location of the box */
+    display: block /* Hidden by default */
+    position: fixed 
+    z-index: 1 
+    padding-top: 100px 
     left: 0
     top: 0
-    width: 100% /* Full width */
-    height: 100% /* Full height */
-    overflow: auto /* Enable scroll if needed */
-    background-color: rgb(0,0,0) /* Fallback color */
-    background-color: rgba(0,0,0,0.4) /* Black w/ opacity */
+    width: 100% 
+    height: 100% 
+    overflow: auto 
+    background-color: rgba(216, 112, 147, 0.288) 
 
-
-/* Modal Content */
 .modal-content 
-    background-color: #fefefe
+    background-color: papayawhip
     margin: auto
     padding: 20px
-    border: 1px solid #888
+    border: 2px solid palevioletred
     width: 80%
+    border-radius: 5px
+    display: flex-start
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    button
+        background: palevioletred
+        border: 1px solid palevioletred
+        padding: 0.5rem
+        border-radius: 3px
+        margin: 1rem auto
+        color: papayawhip
+        cursor: pointer
+        transition: ease 0.5s
+        &:hover
+            background: papayawhip
+            color: palevioletred
+            border: 1px solid palevioletred
 
 
-/* The Close Button */
 .close 
     color: #aaaaaa
     float: right
-    font-size: 28px
+    font-size: 2rem
     font-weight: bold
-
+    border: 1px solid palevioletred
+    border-radius: 20%
+    padding: 0.3rem
+    color: palevioletred
+    transition: ease 0.5s
 
 .close:hover,
 .close:focus 
-    color: #000
+    color: papayawhip
     text-decoration: none
     cursor: pointer
+    background: palevioletred
+
+// MODAL HOW IT WORKS
+
+.how-modal
+    display: none /* Hidden by default */
+    position: fixed 
+    z-index: 1 
+    padding-top: 100px 
+    left: 0
+    top: 0
+    width: 100% 
+    height: 100% 
+    overflow: auto 
+    background-color: rgba(216, 112, 147, 0.288) 
+
+
+.how-modal-content 
+    background-color: papayawhip
+    margin: auto
+    padding: 20px
+    border: 2px solid palevioletred
+    width: 80%
+    border-radius: 5px
+    display: flex-start
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+
+.how-close 
+    float: right
+    font-size: 2rem
+    font-weight: bold
+    border: 1px solid palevioletred
+    border-radius: 20%
+    padding: 0.3rem
+    color: palevioletred
+    transition: ease 0.5s
+
+
+.how-close:hover,
+.how-close:focus 
+    color: papayawhip
+    text-decoration: none
+    cursor: pointer
+    background: palevioletred
+
 
 
 

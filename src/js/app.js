@@ -1,4 +1,7 @@
-// GET https://api.jcdecaux.com/vls/v1/stations?contract=marseille&apiKey=9f3f14e07825f087f2aa0f9edd75acdc12c0eae0
+const dotenv = require("dotenv");
+dotenv.config();
+
+console.log(process.env.DB_USER);
 
 function requette(url) {
   return new Promise(function(resolve, reject) {

@@ -223,7 +223,7 @@ nav {
 
 /* The Modal BIKE INFOS */
 .modal {
-  display: block;
+  display: none;
   position: fixed;
   z-index: 1;
   padding-top: 100px;
@@ -347,5 +347,9 @@ nav {
   text-decoration: none;
   cursor: pointer;
   background: palevioletred;
+}
+
+#stations {
+  height: 500px;
 }
 /*# sourceMappingURL=styles.css.map */

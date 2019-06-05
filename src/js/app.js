@@ -1,6 +1,5 @@
 // GET https://api.jcdecaux.com/vls/v1/stations?contract=marseille&apiKey=9f3f14e07825f087f2aa0f9edd75acdc12c0eae0
 
-//REQUETTE ASCYNCHRONE
 function requette(url) {
   return new Promise(function(resolve, reject) {
     var req = new window.XMLHttpRequest();
@@ -17,7 +16,7 @@ function requette(url) {
     req.send();
   });
 }
-// PROMISE
+
 var getInfos = function() {
   return new Promise(function(resolve, reject) {
     requette(
@@ -32,10 +31,9 @@ var getInfos = function() {
       });
   });
 };
-//TABLEAU DES STATIONS
+
 var stationsTab = [];
 
-// ATTRIBUTION DE CHAQUE ATTRIBUT A UN OUVEL OBJET "STATION" POUR CHAQUE ELEMENT DE DATA
 getInfos().then(function(data) {
   data.forEach(function(info) {
     var station = {
@@ -52,9 +50,9 @@ getInfos().then(function(data) {
       derniereMAJ: info.last_update,
       status: info.status
     };
-    // ON RANGE LES STATIONS DANS UN TABLEAU
+
     stationsTab.push(station);
-    // UN NOUVEAU MARQUEUR POUR CHAQUE STATION
+
     var image = {
       url:
         "https://cdn4.iconfinder.com/data/icons/cycling/100/cycling-mountain-bike-color-2-512.png",
@@ -69,28 +67,24 @@ getInfos().then(function(data) {
       name: station.nomStation,
       icon: image
     });
-    // UN EVENEMENT 'CLICK' POUR CHAQUE MARQUEUR
-    google.maps.event.addListener(mark, "click", function() {
-      var infos = document.getElementById("infos");
 
-      document.getElementById("nomStation").innerHTML =
-        "Stand ID: " + station.nomStation;
-      document.getElementById("adresseStation").innerHTML =
-        "Address: " + station.adresseStation;
-      document.getElementById("statuStation").innerHTML =
-        "Status: " + station.status;
-      document.getElementById("retourVelo").innerHTML =
-        "Empty Slot: " + station.retourVelo;
-      document.getElementById("nbrMaxVelos").innerHTML =
-        "Stand Maximum Bikes: " + station.nbrMaxVelos;
-      document.getElementById("velosRestants").innerHTML =
-        "Available Bikes: " + station.velosRestants;
+    google.maps.event.addListener(mark, "click", function() {
+      document.getElementById("nomStation").innerHTML = `
+      <h2>Stand Name: ${station.nomStation}</h2>
+      <p>Address: ${station.adresseStation}</p>
+      <p>Status: ${station.status}</p>
+      <p>Available Slot to Park: ${station.retourVelo}</p>
+      <p>Max Bikes: ${station.nbrMaxVelos}</p>
+      <p>Bikes left: ${station.velosRestants}</p>
+      `;
     });
+
     // Click marker to get station infos
     mark.addListener("click", function() {
       modal.style.display = "block";
     });
   });
+
   // click outside to close
   window.onclick = function(event) {
     if (event.target == modal) {
@@ -100,7 +94,6 @@ getInfos().then(function(data) {
 });
 
 // MODAL CALL
-
 let modal = document.getElementById("myModal");
 let btn = document.getElementById("myBtn");
 let span = document.getElementsByClassName("close")[0];

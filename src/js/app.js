@@ -74,17 +74,17 @@ getInfos().then(function(data) {
       var infos = document.getElementById("infos");
 
       document.getElementById("nomStation").innerHTML =
-        "Nom de la station : " + station.nomStation;
+        "Stand ID: " + station.nomStation;
       document.getElementById("adresseStation").innerHTML =
-        "Adresse de la station : " + station.adresseStation;
+        "Address: " + station.adresseStation;
       document.getElementById("statuStation").innerHTML =
-        "Etat de la station : " + station.status;
+        "Status: " + station.status;
       document.getElementById("retourVelo").innerHTML =
-        "Nombre d'emplacement vide disponibles : " + station.retourVelo;
+        "Empty Slot: " + station.retourVelo;
       document.getElementById("nbrMaxVelos").innerHTML =
-        "nombre total de vélos sur la station : " + station.nbrMaxVelos;
+        "Stand Maximum Bikes: " + station.nbrMaxVelos;
       document.getElementById("velosRestants").innerHTML =
-        "Nombre de vélo(s) disponible(s) : " + station.velosRestants;
+        "Available Bikes: " + station.velosRestants;
     });
     // Click marker to get station infos
     mark.addListener("click", function() {

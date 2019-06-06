@@ -57,7 +57,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #333;
+  color: #00692e;
 }
 
 .burger {
@@ -82,39 +82,37 @@ nav {
   body {
     overflow-x: hidden;
   }
-  .nav-links {
-    position: absolute;
-    right: 0;
-    height: 92vh;
-    top: 8vh;
-    background-color: #feffff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 50%;
-    -webkit-transition: -webkit-transform 0.5s ease-in;
-    transition: -webkit-transform 0.5s ease-in;
-    transition: transform 0.5s ease-in;
-    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
-  }
   .nav-links li {
     opacity: 0;
   }
   .burger {
     display: block;
   }
-}
-
-.nav-active {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+  .nav-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .footer-timing {
+    border: 1px solid #feffff;
+    border-radius: 5px;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #00692e;
+    color: white;
+    margin: auto 3rem;
+    width: 80%;
+  }
+  .footer-socials {
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes navLinkFade {
@@ -193,7 +191,7 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: red;
+  background-color: #00692e;
   color: white;
   -webkit-box-flex: 2;
       -ms-flex: 2;
@@ -222,7 +220,7 @@ nav {
 }
 
 .footer .footer-socials a:hover {
-  color: #333;
+  color: #00692e;
 }
 
 .modal {
@@ -244,6 +242,7 @@ nav {
   padding: 20px;
   border: 2px solid #00BA51;
   width: 80%;
+  height: 80%;
   border-radius: 5px;
   display: flex-start;
   -webkit-box-orient: vertical;
@@ -318,6 +317,7 @@ nav {
   padding: 20px;
   border: 2px solid #00BA51;
   width: 80%;
+  height: 80%;
   border-radius: 5px;
   display: flex-start;
   -webkit-box-orient: vertical;

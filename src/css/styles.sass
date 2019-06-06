@@ -1,5 +1,6 @@
 $base-color: #00BA51
 $base-trans: rgba(0, 186, 81, 0.288)
+$base-strong: rgb(0, 105, 46)
 $text-color: #333
 $main-text: #feffff
 
@@ -49,7 +50,7 @@ nav
     font-weight: bold
     font-size: 14px
     &:hover
-        color: $text-color
+        color: $base-strong
 
 .burger 
     display: none
@@ -69,28 +70,25 @@ nav
 @media screen and (max-width: 768px) 
     body 
         overflow-x: hidden
-    
-    .nav-links 
-        position: absolute
-        right: 0
-        height: 92vh
-        top: 8vh
-        background-color: $main-text
-        display: flex
-        flex-direction: column
-        align-items: center
-        width: 50%
-        transition: transform 0.5s ease-in;
-
-    
     .nav-links li 
         opacity: 0
-    
     .burger 
         display: block
-
-.nav-active 
-    transform: translateX(0%)
+    .nav-active 
+        transform: translateX(0%)
+    .footer-timing
+        border: 1px solid $main-text
+        border-radius: 5px
+        height: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $base-strong
+        color: white
+        margin: auto 3rem
+        width: 80%
+    .footer-socials
+        opacity: 0
 
 
 @-webkit-keyframes navLinkFade 
@@ -142,7 +140,7 @@ nav
         display: flex
         align-items: center
         justify-content: center
-        background-color: red
+        background-color: $base-strong
         color: white
         flex: 2
         margin: auto 3rem
@@ -156,7 +154,7 @@ nav
         a
             color: $main-text
             &:hover
-                color: $text-color
+                color: $base-strong
 
 // The Modal BIKE INFOS 
 .modal 
@@ -177,6 +175,7 @@ nav
     padding: 20px
     border: 2px solid $base-color
     width: 80%
+    height: 80%
     border-radius: 5px
     display: flex-start
     flex-direction: column
@@ -238,6 +237,7 @@ nav
     padding: 20px
     border: 2px solid $base-color
     width: 80%
+    height: 80%
     border-radius: 5px
     display: flex-start
     flex-direction: column

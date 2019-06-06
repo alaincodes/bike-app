@@ -14,10 +14,10 @@ function requette(url) {
     req.send();
   });
 }
-let JCD_APIKEY = SECRET_KEY.JCD_KEY;
+
 var getInfos = function() {
   return new Promise(function(resolve, reject) {
-    requette(JCD_APIKEY)
+    requette("https://api.jcdecaux.com/vls/v1/stations?contract=marseille&apiKey=9f3f14e07825f087f2aa0f9edd75acdc12c0eae0")
       .then(function(response) {
         var data = JSON.parse(response);
         resolve(data);

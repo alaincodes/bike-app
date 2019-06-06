@@ -14,10 +14,10 @@
         <h4>webike <i class="fas fa-bicycle fa-lg"></i></h4>
       </div>
       <ul class="nav-links">
-        <li><a href="#">Bike</a></li>
-        <li><a href="#">Parking</a></li>
+        <li id="bike-btn"><a href="#">Bike</a></li>
+        <li id="parking-btn"><a href="#">Parking</a></li>
         <li id="how-btn"><a href="#">How it works</a></li>
-        <li><a href="#">Contact</a></li>
+        <li id="contact-btn"><a href="#">Contact</a></li>
       </ul>
       <div class="burger">
         <div class="line1"></div>
@@ -41,12 +41,41 @@
     </div>
 
     <!-- Modal 2 HOW IT WORKS -->
-    <button id="how-btn">Open Modal</button>
     <div id="how-modal" class="how-modal">
       <div class="how-modal-content">
         <span class="how-close">&times;</span>
         <p>Click Bike Location</p>
         <p>Confirm to Rent</p>
+      </div>
+    </div>
+
+    <!-- Modal 3 Contact -->
+    <div id="contact-modal" class="contact-modal">
+      <div class="contact-modal-content">
+        <span class="contact-close">&times;</span>
+        <h1>Contact</h1>
+        <p>Report Issue</p>
+        <p>Call Us</p>
+      </div>
+    </div>
+
+    <!-- Modal 4 BIKE Contact -->
+    <div id="bike-modal" class="bike-modal">
+      <div class="bike-modal-content">
+        <span class="bike-close">&times;</span>
+        <h1>Bike</h1>
+        <p>Show available bikes on map</p>
+        <p>Find NEAREST bike available.</p>
+      </div>
+    </div>
+
+    <!-- Modal 5 PARKING Contact -->
+    <div id="parking-modal" class="parking-modal">
+      <div class="parking-modal-content">
+        <span class="parking-close">&times;</span>
+        <h1>Parking</h1>
+        <p>Show available parking spot on the map.</p>
+        <p>Find NEAREST parking spot available.</p>
       </div>
     </div>
 
@@ -69,5 +98,8 @@
     <script src="./js/app.js"></script>
     <!-- <script src="./js/betterpromise.js"></script> -->
     <script src="./js/howitworks.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/bike.js"></script>
+    <script src="./js/parking.js"></script>
   </body>
 </html>

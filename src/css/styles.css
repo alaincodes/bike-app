@@ -21,15 +21,16 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   min-height: 8vh;
-  background: palevioletred;
+  background: #00BA51;
 }
 
 .logo {
-  color: papayawhip;
+  color: #feffff;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 20px;
   line-height: 4;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -48,11 +49,15 @@ nav {
 }
 
 .nav-links a {
-  color: papayawhip;
+  color: #feffff;
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #333;
 }
 
 .burger {
@@ -63,7 +68,7 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: papayawhip;
+  background-color: #feffff;
   margin: 5px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
@@ -82,7 +87,7 @@ nav {
     right: 0;
     height: 92vh;
     top: 8vh;
-    background-color: palevioletred;
+    background-color: #feffff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -161,7 +166,7 @@ nav {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: palevioletred;
+  background-color: #00BA51;
   text-align: center;
   height: 8vh;
   display: -webkit-box;
@@ -176,8 +181,7 @@ nav {
 }
 
 .footer .footer-timing {
-  border: 1px solid papayawhip;
-  width: 500px;
+  border: 1px solid #feffff;
   border-radius: 5px;
   height: 40px;
   display: -webkit-box;
@@ -194,7 +198,7 @@ nav {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  margin: auto 1rem;
+  margin: auto 3rem;
 }
 
 .footer .footer-socials {
@@ -214,14 +218,13 @@ nav {
 }
 
 .footer .footer-socials a {
-  color: white;
+  color: #feffff;
 }
 
 .footer .footer-socials a:hover {
-  color: papayawhip;
+  color: #333;
 }
 
-/* The Modal BIKE INFOS */
 .modal {
   display: none;
   position: fixed;
@@ -232,14 +235,14 @@ nav {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(216, 112, 147, 0.288);
+  background-color: rgba(0, 186, 81, 0.288);
 }
 
 .modal-content {
-  background-color: papayawhip;
+  background-color: #feffff;
   margin: auto;
   padding: 20px;
-  border: 2px solid palevioletred;
+  border: 2px solid #00BA51;
   width: 80%;
   border-radius: 5px;
   display: flex-start;
@@ -253,46 +256,46 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: palevioletred;
+  color: #333;
 }
 
 .modal-content button {
-  background: palevioletred;
-  border: 1px solid palevioletred;
+  background: #00BA51;
+  border: 1px solid #00BA51;
   padding: 0.5rem;
   border-radius: 3px;
   margin: 1rem auto;
-  color: papayawhip;
+  color: #feffff;
   cursor: pointer;
   -webkit-transition: ease 0.5s;
   transition: ease 0.5s;
 }
 
 .modal-content button:hover {
-  background: papayawhip;
-  color: palevioletred;
-  border: 1px solid palevioletred;
+  background: #feffff;
+  color: #00BA51;
+  border: 1px solid #00BA51;
 }
 
 .close {
-  color: #aaaaaa;
+  color: #333;
   float: right;
   font-size: 2rem;
   font-weight: bold;
-  border: 1px solid palevioletred;
+  border: 1px solid #00BA51;
   border-radius: 20%;
   padding: 0.3rem;
-  color: palevioletred;
+  color: #00BA51;
   -webkit-transition: ease 0.5s;
   transition: ease 0.5s;
 }
 
 .close:hover,
 .close:focus {
-  color: papayawhip;
+  color: #feffff;
   text-decoration: none;
   cursor: pointer;
-  background: palevioletred;
+  background: #00BA51;
 }
 
 .how-modal {
@@ -305,15 +308,15 @@ nav {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(216, 112, 147, 0.288);
-  color: palevioletred;
+  background-color: rgba(0, 186, 81, 0.288);
+  color: #00BA51;
 }
 
 .how-modal-content {
-  background-color: papayawhip;
+  background-color: #feffff;
   margin: auto;
   padding: 20px;
-  border: 2px solid palevioletred;
+  border: 2px solid #00BA51;
   width: 80%;
   border-radius: 5px;
   display: flex-start;
@@ -333,20 +336,20 @@ nav {
   float: right;
   font-size: 2rem;
   font-weight: bold;
-  border: 1px solid palevioletred;
+  border: 1px solid #00BA51;
   border-radius: 20%;
   padding: 0.3rem;
-  color: palevioletred;
+  color: #00BA51;
   -webkit-transition: ease 0.5s;
   transition: ease 0.5s;
 }
 
 .how-close:hover,
 .how-close:focus {
-  color: papayawhip;
+  color: #feffff;
   text-decoration: none;
   cursor: pointer;
-  background: palevioletred;
+  background: #00BA51;
 }
 
 #stations {

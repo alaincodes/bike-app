@@ -1,3 +1,8 @@
+$base-color: #00BA51
+$base-trans: rgba(0, 186, 81, 0.288)
+$text-color: #333
+$main-text: #feffff
+
 
 *
     box-sizing: border-box
@@ -14,14 +19,15 @@ nav
     justify-content: space-around
     align-items: center
     min-height: 8vh
-    background: palevioletred
+    background: $base-color
 
 .logo 
-    color: papayawhip
+    color: $main-text
     text-transform: uppercase
     letter-spacing: 5px
     font-size: 20px
     line-height: 4
+    cursor: pointer
 
 
 .nav-links 
@@ -37,11 +43,13 @@ nav
 
 
 .nav-links a 
-    color: papayawhip
+    color: $main-text
     text-decoration: none
     letter-spacing: 3px
     font-weight: bold
     font-size: 14px
+    &:hover
+        color: $text-color
 
 .burger 
     display: none
@@ -50,7 +58,7 @@ nav
 .burger div 
     width: 25px
     height: 3px
-    background-color: papayawhip
+    background-color: $main-text
     margin: 5px
     transition: all 0.3 ease
 
@@ -67,7 +75,7 @@ nav
         right: 0
         height: 92vh
         top: 8vh
-        background-color: palevioletred
+        background-color: $main-text
         display: flex
         flex-direction: column
         align-items: center
@@ -80,8 +88,6 @@ nav
     
     .burger 
         display: block
-
-
 
 .nav-active 
     transform: translateX(0%)
@@ -106,19 +112,14 @@ nav
         opacity: 1
         transform: translateX(0px)
 
-
 .toggle .line1 
     transform: rotate(-45deg) translate(-5px, 6px)
-
 
 .toggle .line2 
     opacity: 0
 
-
 .toggle .line3 
     transform: rotate(45deg) translate(-5px, -6px)
-
-
 
 #map
     height: calc(100% - 16vh)
@@ -128,15 +129,14 @@ nav
     left: 0
     bottom: 0
     width: 100%
-    background-color: palevioletred
+    background-color: $base-color
     text-align: center
     height: 8vh
     display: flex
     align-items: center
     justify-content: center
     .footer-timing
-        border: 1px solid papayawhip
-        width: 500px
+        border: 1px solid $main-text
         border-radius: 5px
         height: 40px
         display: flex
@@ -145,7 +145,7 @@ nav
         background-color: red
         color: white
         flex: 2
-        margin: auto 1rem
+        margin: auto 3rem
     .footer-socials
         flex: 1
         margin: auto 1rem
@@ -154,14 +154,11 @@ nav
         justify-content: space-around
         align-items: center
         a
-            color: white
+            color: $main-text
             &:hover
-                color: papayawhip
+                color: $text-color
 
-
-
-
-/* The Modal BIKE INFOS */
+// The Modal BIKE INFOS 
 .modal 
     display: none /* Hidden by default */
     position: fixed 
@@ -172,52 +169,52 @@ nav
     width: 100% 
     height: 100% 
     overflow: auto 
-    background-color: rgba(216, 112, 147, 0.288) 
+    background-color: $base-trans
 
 .modal-content 
-    background-color: papayawhip
+    background-color: $main-text
     margin: auto
     padding: 20px
-    border: 2px solid palevioletred
+    border: 2px solid $base-color
     width: 80%
     border-radius: 5px
     display: flex-start
     flex-direction: column
     justify-content: center
     align-items: center
-    color: palevioletred
+    color: $text-color
     button
-        background: palevioletred
-        border: 1px solid palevioletred
+        background: $base-color
+        border: 1px solid $base-color
         padding: 0.5rem
         border-radius: 3px
         margin: 1rem auto
-        color: papayawhip
+        color: $main-text
         cursor: pointer
         transition: ease 0.5s
         &:hover
-            background: papayawhip
-            color: palevioletred
-            border: 1px solid palevioletred
+            background: $main-text
+            color: $base-color
+            border: 1px solid $base-color
 
 
 .close 
-    color: #aaaaaa
+    color: $text-color
     float: right
     font-size: 2rem
     font-weight: bold
-    border: 1px solid palevioletred
+    border: 1px solid $base-color
     border-radius: 20%
     padding: 0.3rem
-    color: palevioletred
+    color: $base-color
     transition: ease 0.5s
 
 .close:hover,
 .close:focus 
-    color: papayawhip
+    color: $main-text
     text-decoration: none
     cursor: pointer
-    background: palevioletred
+    background: $base-color
 
 // MODAL HOW IT WORKS
 
@@ -231,15 +228,15 @@ nav
     width: 100% 
     height: 100% 
     overflow: auto 
-    background-color: rgba(216, 112, 147, 0.288)
-    color: palevioletred
+    background-color: $base-trans
+    color: $base-color
 
 
 .how-modal-content 
-    background-color: papayawhip
+    background-color: $main-text
     margin: auto
     padding: 20px
-    border: 2px solid palevioletred
+    border: 2px solid $base-color
     width: 80%
     border-radius: 5px
     display: flex-start
@@ -252,19 +249,19 @@ nav
     float: right
     font-size: 2rem
     font-weight: bold
-    border: 1px solid palevioletred
+    border: 1px solid $base-color
     border-radius: 20%
     padding: 0.3rem
-    color: palevioletred
+    color: $base-color
     transition: ease 0.5s
 
 
 .how-close:hover,
 .how-close:focus 
-    color: papayawhip
+    color: $main-text
     text-decoration: none
     cursor: pointer
-    background: palevioletred
+    background: $base-color
 
 
 #stations

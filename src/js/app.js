@@ -17,7 +17,9 @@ function requette(url) {
 
 var getInfos = function() {
   return new Promise(function(resolve, reject) {
-    requette("https://api.jcdecaux.com/vls/v1/stations?contract=marseille&apiKey=9f3f14e07825f087f2aa0f9edd75acdc12c0eae0")
+    requette(
+      "https://api.jcdecaux.com/vls/v1/stations?contract=marseille&apiKey=9f3f14e07825f087f2aa0f9edd75acdc12c0eae0"
+    )
       .then(function(response) {
         var data = JSON.parse(response);
         resolve(data);
@@ -82,7 +84,7 @@ getInfos().then(function(data) {
   });
 
   // click outside to close
-  window.onclick = function(event) {
+  modal.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }

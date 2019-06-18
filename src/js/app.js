@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 function requette(url) {
   return new Promise(function(resolve, reject) {
     var req = new window.XMLHttpRequest();
@@ -17,9 +19,7 @@ function requette(url) {
 
 var getInfos = function() {
   return new Promise(function(resolve, reject) {
-    requette(
-      "https://api.jcdecaux.com/vls/v1/stations?contract=marseille&apiKey=9f3f14e07825f087f2aa0f9edd75acdc12c0eae0"
-    )
+    requette(DB_APIKEY)
       .then(function(response) {
         var data = JSON.parse(response);
         resolve(data);

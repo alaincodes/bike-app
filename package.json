@@ -13,7 +13,7 @@
   "dependencies": {
     "dotenv": "^8.0.0",
     "eslint": "^5.16.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^7.0.0"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.3"
